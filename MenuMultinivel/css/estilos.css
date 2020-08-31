@@ -28,9 +28,10 @@ header #button-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 100vh;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out;
 }
 
 .navegacion ul {
@@ -40,6 +41,8 @@ header #button-menu {
     list-style: none;
     position: absolute;
     top: 0;
+    left: -320px;
+    transition: left .5s;
 }
 
 .navegacion .menu li.title-menu {
@@ -58,6 +61,11 @@ header #button-menu {
     font-weight: 200;
     text-decoration: none;
     color: #575d69;
+}
+
+.navegacion .menu a:hover {
+    background-color: #798DA3;
+    color: #ffffff;
 }
 
 .navegacion .menu li span.icon-menu {
@@ -93,4 +101,10 @@ header #button-menu {
     font-weight: 900;
     content: '\f0d9';
     margin-right: 10px;
+}
+
+@media (max-width:320px) {
+    .navegacion ul {
+        width: 100%;
+    }
 }
